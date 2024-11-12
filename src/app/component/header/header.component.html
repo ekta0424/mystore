@@ -1,0 +1,25 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px;" class="fas fa-store">&nbsp;
+                
+            </i>
+            <strong style="font-size: 30px;">MyStore</strong>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+
+
+        </div>
+        <button class="btn btn-primary" routerLink="/login">
+          <i style="font-size: 25px;" class="fas fa-user">
+            <span style="font-size: 15px;"> &nbsp; Login</span>
+          </i>
+        </button>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+</header>
